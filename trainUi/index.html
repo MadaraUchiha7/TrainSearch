@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Railways - Train Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-train"></i>
+                    <h1>Indian Railways</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="search-form">
+            <h2 class="form-title">Search Trains</h2>
+            <div class="form-row">
+                <div class="form-group select-station">
+                    <label for="sourceStation">From Station</label>
+                    <input type="text" id="sourceStation" placeholder="Enter source station name or code">
+                    <input type="hidden" id="sourceCode">
+                </div>
+                <div class="form-group select-station">
+                    <label for="destinationStation">To Station</label>
+                    <input type="text" id="destinationStation" placeholder="Enter destination station name or code">
+                    <input type="hidden" id="destinationCode">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <button id="searchButton" class="search-button">
+                        <i class="fas fa-search"></i>
+                        Search Trains
+                    </button>
+                </div>
+            </div>
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Searching for trains...</p>
+        </div>
+        
+        <div class="results-container" id="resultsContainer">
+            <div class="results-header">
+                <h3 class="results-title">Available Trains</h3>
+                <p class="results-count" id="resultsCount">0 trains found</p>
+            </div>
+            <div id="trainResults"></div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Indian Railways | Train Search Service</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
